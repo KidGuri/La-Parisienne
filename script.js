@@ -157,33 +157,29 @@
   });
 })();
 
-// ─── Reviews carousel ─────────────────────────────────────
-(function initCarousel() {
-  const track = document.getElementById('carouselTrack');
-  if (!track) return;
+// ─── Reviews carousel (reusable) ──────────────────────────
+function setupCarousel(trackEl) {
+  if (!trackEl) return;
 
-  // Duplicate cards for seamless infinite loop
-  const cards = Array.from(track.children);
+  const cards = Array.from(trackEl.children);
   cards.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
+    trackEl.appendChild(clone);
   });
-  // Start animation only after duplication so translateX(-50%) lands correctly
-  track.style.animationPlayState = 'running';
+  trackEl.style.animationPlayState = 'running';
 
-  // Drag-to-scroll
-  const viewport = track.parentElement;
+  const viewport = trackEl.parentElement;
   let isDragging = false, startX = 0, scrollLeft = 0;
 
   function getCurrentTranslate() {
-    const matrix = new DOMMatrix(window.getComputedStyle(track).transform);
+    const matrix = new DOMMatrix(window.getComputedStyle(trackEl).transform);
     return matrix.m41;
   }
 
   viewport.addEventListener('mousedown', (e) => {
     isDragging = true;
-    track.style.animationPlayState = 'paused';
+    trackEl.style.animationPlayState = 'paused';
     startX = e.pageX;
     scrollLeft = getCurrentTranslate();
     viewport.style.cursor = 'grabbing';
@@ -191,17 +187,21 @@
 
   window.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
-    const dx = e.pageX - startX;
-    track.style.transform = `translateX(${scrollLeft + dx}px)`;
+    trackEl.style.transform = `translateX(${scrollLeft + (e.pageX - startX)}px)`;
   });
 
   window.addEventListener('mouseup', () => {
     if (!isDragging) return;
     isDragging = false;
     viewport.style.cursor = 'grab';
-    track.style.animationPlayState = 'running';
-    track.style.transform = '';
+    trackEl.style.animationPlayState = 'running';
+    trackEl.style.transform = '';
   });
+}
+
+(function initCarousels() {
+  setupCarousel(document.getElementById('carouselTrack'));
+  setupCarousel(document.getElementById('carouselTrack2'));
 })();
 
 // ─── Smooth anchor scroll ─────────────────────────────────
