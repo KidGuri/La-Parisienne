@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Parisienne — Cocktail Bar · Lounge en Los Arenales del Sol, Alicante. Cócteles artesanales, tapas, carne a la piedra y terraza frente al mar. Donde el Mediterráneo se encuentra con París.">
+  <meta name="keywords" content="la parisienne, bar lounge, cócteles, Los Arenales del Sol, Alicante, tapas, cocktail bar, terraza, playa Carabassí">
+  <title>La Parisienne · Cocktail Bar Lounge — Los Arenales del Sol</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="La Parisienne · Cocktail Bar Lounge">
+  <meta property="og:description" content="Cócteles artesanales, tapas y terraza frente al mar en Los Arenales del Sol, Alicante.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "La Parisienne Coctel-Bar-Lounge",
+    "description": "Cocktail bar y lounge frente al mar en Los Arenales del Sol. Cócteles artesanales, tapas, carne a la piedra y hookah.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. San Bartolomé de Tirajana, 32-34",
+      "addressLocality": "Los Arenales del Sol",
+      "postalCode": "03195",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34659881284",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "reviewCount": "779"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "00:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "09:30", "closes": "00:30" }
+    ],
+    "servesCuisine": ["Cocktails","Spanish","Mediterranean","Tapas"],
+    "url": "https://la-parisienne.vercel.app",
+    "sameAs": ["https://www.instagram.com/laparisiennebarloungee"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursorDot"></div>
+
+  <!-- Gold particles -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- ══ NAV ══════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="La Parisienne inicio">
+        <span class="logo-the">La</span>
+        <span class="logo-name">Parisienne</span>
+        <span class="logo-dot">◆</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://maps.google.com/?q=La+Parisienne+Los+Arenales+del+Sol" target="_blank" rel="noopener" class="nav-cta btn btn-gold">Cómo llegar</a>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════ -->
+  <section class="hero" id="inicio" aria-label="Portada">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-bokeh" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge hero-animate" style="animation-delay:0s">
+        <span class="badge-dot"></span>
+        Los Arenales del Sol · Alicante
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-mask"><span class="title-line" data-line="1">La Parisienne</span></span>
+        <span class="title-mask"><span class="title-line accent" data-line="2">Cocktail Lounge</span></span>
+      </h1>
+
+      <p class="hero-tagline hero-animate" style="animation-delay:0.6s">
+        Donde el Mediterráneo se encuentra con París
+      </p>
+
+      <div class="hero-actions hero-animate" style="animation-delay:0.78s">
+        <a href="#especialidades" class="btn btn-gold">Ver Especialidades</a>
+        <a href="#resenas" class="btn btn-ghost">Leer Reseñas</a>
+      </div>
+
+      <div class="hero-stats hero-animate" style="animation-delay:0.95s">
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-value" data-count="4.0">0</span><span class="stat-suffix">★</span>
+          </div>
+          <span class="stat-label">Valoración Google</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number">
+            <span class="stat-value" data-count="779">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Reseñas verificadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number"><span class="stat-value">Frente</span></div>
+          <span class="stat-label">al Mar · Playa Carabassí</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint hero-animate" style="animation-delay:1.3s" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Descubre más</span>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══════════════════════════════════════ -->
+  <section class="about section" id="nosotros" aria-label="Sobre nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="section-eyebrow">◆ Nuestra historia</p>
+          <h2 class="section-title">Un rincón<br><em>con alma propia</em></h2>
+          <p class="about-body">
+            A pasos de la Playa del Carabassí, La Parisienne es mucho más que un bar. Es el lugar donde el ambiente mediterráneo y el espíritu cosmopolita de París se funden en una experiencia única.
+          </p>
+          <p class="about-body">
+            Desde el café de la mañana hasta el último cóctel de la noche, nuestro equipo multilingüe —español, inglés, francés— cuida cada detalle para que te sientas en casa, vengas de donde vengas.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Terraza frente al mar</span>
+            <span class="tag">Cócteles artesanales</span>
+            <span class="tag">Equipo multilingüe</span>
+            <span class="tag">Noches de fútbol</span>
+            <span class="tag">Hookah & Shisha</span>
+          </div>
+        </div>
+
+        <div class="about-cards reveal-right" data-delay="100">
+          <div class="about-card">
+            <div class="about-card-icon">🍸</div>
+            <h3>Coctelería en vivo</h3>
+            <p>Cada cóctel preparado frente a ti, con ingredientes frescos y una presentación que entra por los ojos.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌊</div>
+            <h3>Terraza con vistas</h3>
+            <p>Una terraza junto al mar donde el atardecer mediterráneo es parte del menú, sin coste adicional.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌍</div>
+            <h3>Ambiente internacional</h3>
+            <p>Visitantes de toda Europa se dan cita aquí, creando una atmósfera vibrante y acogedora.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📺</div>
+            <h3>Noches de partido</h3>
+            <p>Vive los grandes eventos deportivos con el mejor ambiente y tus cócteles favoritos en mano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SPECIALTIES ════════════════════════════════ -->
+  <section class="specialties section" id="especialidades" aria-label="Especialidades">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">◆ Nuestra oferta</p>
+        <h2 class="section-title">Las mejores<br><em>razones para venir</em></h2>
+        <p class="section-subtitle">De los cócteles más creativos a la carne a la piedra más jugosa — aquí cada visita es memorable.</p>
+      </div>
+
+      <div class="specialties-grid">
+        <div class="specialty-card reveal-up" data-delay="0">
+          <div class="specialty-img specialty-img--cocktails" aria-hidden="true">
+            <div class="specialty-overlay"></div>
+            <span class="specialty-emoji">🍹</span>
+          </div>
+          <div class="specialty-body">
+            <h3>Cócteles Artesanales</h3>
+            <p>Desde un Mojito clásico a creaciones únicas preparadas en tu mesa. Versiones alcohólicas y sin alcohol.</p>
+            <span class="specialty-tag">Firma de la casa</span>
+          </div>
+        </div>
+
+        <div class="specialty-card reveal-up" data-delay="80">
+          <div class="specialty-img specialty-img--tapas" aria-hidden="true">
+            <div class="specialty-overlay"></div>
+            <span class="specialty-emoji">🥘</span>
+          </div>
+          <div class="specialty-body">
+            <h3>Tapas & Raciones</h3>
+            <p>La mejor tradición española en cada bocado. Empanadas, carpaccio, y raciones generosas para compartir.</p>
+            <span class="specialty-tag">Tradición española</span>
+          </div>
+        </div>
+
+        <div class="specialty-card reveal-up" data-delay="160">
+          <div class="specialty-img specialty-img--meat" aria-hidden="true">
+            <div class="specialty-overlay"></div>
+            <span class="specialty-emoji">🥩</span>
+          </div>
+          <div class="specialty-body">
+            <h3>Carne a la Piedra</h3>
+            <p>La experiencia de cocinar tu propia carne a la piedra volcánica. Sabor auténtico, ritual único.</p>
+            <span class="specialty-tag">Experiencia única</span>
+          </div>
+        </div>
+
+        <div class="specialty-card reveal-up" data-delay="60">
+          <div class="specialty-img specialty-img--burger" aria-hidden="true">
+            <div class="specialty-overlay"></div>
+            <span class="specialty-emoji">🍔</span>
+          </div>
+          <div class="specialty-body">
+            <h3>Burgers Caseras</h3>
+            <p>Hamburguesas artesanales con pan de elaboración propia y patatas caseras que marcan la diferencia.</p>
+            <span class="specialty-tag">Receta propia</span>
+          </div>
+        </div>
+
+        <div class="specialty-card reveal-up" data-delay="140">
+          <div class="specialty-img specialty-img--hookah" aria-hidden="true">
+            <div class="specialty-overlay"></div>
+            <span class="specialty-emoji">💨</span>
+          </div>
+          <div class="specialty-body">
+            <h3>Hookah & Shisha</h3>
+            <p>Relájate con una hookah premium mientras disfrutas del ambiente único de nuestra terraza nocturna.</p>
+            <span class="specialty-tag">Experiencia premium</span>
+          </div>
+        </div>
+
+        <div class="specialty-card specialty-card--cta reveal-up" data-delay="220">
+          <div class="specialty-cta-inner">
+            <span class="specialty-cta-icon">📍</span>
+            <h3>Ven a visitarnos</h3>
+            <p>Terraza abierta desde las 9:30 AM. A pasos de la Playa del Carabassí.</p>
+            <a href="https://maps.google.com/?q=La+Parisienne+Los+Arenales+del+Sol" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Ver en el mapa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ REVIEWS ════════════════════════════════════ -->
+  <section class="reviews section" id="resenas" aria-label="Reseñas">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">◆ Lo que dicen</p>
+        <h2 class="section-title">Reseñas de<br><em>nuestros clientes</em></h2>
+        <p class="section-subtitle">Más de 779 opiniones en Google de visitantes de todo el mundo.</p>
+      </div>
+    </div>
+
+    <div class="carousel-wrap reveal-up" data-delay="100">
+      <div class="carousel-fade carousel-fade-left" aria-hidden="true"></div>
+      <div class="carousel-fade carousel-fade-right" aria-hidden="true"></div>
+      <div class="carousel-viewport" role="region" aria-label="Carrusel de reseñas">
+        <div class="carousel-track" id="carouselTrack">
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">C</div>
+              <div class="review-meta">
+                <span class="review-name">EMT_Chris</span>
+                <span class="review-origin">Davenport, Florida 🇺🇸</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Steps away from the beach. Indoor/outdoor seating with cover for cool weather. Both of our servers were excellent, attentive to every detail. We ordered coffee, beer and a cocktail along with empanadas. Everything was great."</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">F</div>
+              <div class="review-meta">
+                <span class="review-name">Fiona M.</span>
+                <span class="review-origin">Exeter, Reino Unido 🇬🇧</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"This place is a real find. The atmosphere is great and we came here several times over our 2 week holiday. We were always made very welcome, had no complaints with the service and the Manager and waitress were very attentive and friendly."</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">E</div>
+              <div class="review-meta">
+                <span class="review-name">Elena F.</span>
+                <span class="review-origin">Alicante 🇪🇸</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Excellent! Food is tasty and very plentiful — you will NOT go hungry here, that is for sure. A very warm welcome by the owner who is very attentive and gives his time to all customers! Highly recommend! And the desserts are to die for."</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">S</div>
+              <div class="review-meta">
+                <span class="review-name">Salim A.</span>
+                <span class="review-origin">Francia 🇫🇷</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Very nice team, hearty and delicious dishes. The hookahs excel. I really recommend the cocktails that are prepared in front of you and super well decorated. Homemade burgers as well as home fries — top recommendations!"</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">M</div>
+              <div class="review-meta">
+                <span class="review-name">Marjorie A.M.</span>
+                <span class="review-origin">Europa 🌍</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"We had a great time, the servers are friendly and the manager is great! We came on two match nights and there was a superb atmosphere. The cocktails are super good and the desserts too. Highly recommended!"</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">S</div>
+              <div class="review-meta">
+                <span class="review-name">Stephen H.</span>
+                <span class="review-origin">Bruselas, Bélgica 🇧🇪</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Service was amazing. Atmosphere was good. Food was good. Returned three times because we felt like the owner and staff appreciated us as clients. Will return!"</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">S</div>
+              <div class="review-meta">
+                <span class="review-name">Sophie</span>
+                <span class="review-origin">Francia 🇫🇷</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Visiting Alicante, my family brought us here — twice in the same week, so good! The dishes are hearty, the waiters and owners are adorable. I highly recommend this restaurant."</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">C</div>
+              <div class="review-meta">
+                <span class="review-name">Caline P.</span>
+                <span class="review-origin">Somme, Francia 🇫🇷</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Service is very good. A waitress spoke French — much appreciated! The dishes are very good, hearty portions. I especially recommend the tapas. Will definitely be back."</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-avatar">I</div>
+              <div class="review-meta">
+                <span class="review-name">Inspire6647</span>
+                <span class="review-origin">Europa 🌍</span>
+              </div>
+              <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="review-text">"Bar restaurant at the top! Warm and welcoming staff. The staff speaks several languages which makes communication easy. Succulent and very well presented cocktails and dishes! We will come back with pleasure!"</p>
+            <span class="review-platform">Google</span>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOURS & CONTACT ════════════════════════════ -->
+  <section class="contact section" id="contacto" aria-label="Horario y contacto">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">◆ Visítanos</p>
+        <h2 class="section-title">Horario &<br><em>Cómo llegar</em></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+
+          <div class="contact-block">
+            <h3 class="contact-block-title">Horario de apertura</h3>
+            <div class="hours-list">
+              <div class="hour-row closed">
+                <span class="hour-day">Lunes</span>
+                <span class="hour-badge closed-badge">Cerrado</span>
+              </div>
+              <div class="hour-row">
+                <span class="hour-day">Martes — Jueves</span>
+                <span class="hour-time">09:00 — 00:30</span>
+              </div>
+              <div class="hour-row highlight">
+                <span class="hour-day">Viernes — Domingo</span>
+                <span class="hour-time">09:30 — 00:30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block-title">Contacto directo</h3>
+            <div class="contact-items">
+              <a href="tel:+34659881284" class="contact-item" aria-label="Llamar">
+                <span class="contact-item-icon">📞</span>
+                <div>
+                  <span class="contact-item-label">Teléfono</span>
+                  <span class="contact-item-value">+34 659 88 12 84</span>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/laparisiennebarloungee" target="_blank" rel="noopener" class="contact-item" aria-label="Instagram">
+                <span class="contact-item-icon">📸</span>
+                <div>
+                  <span class="contact-item-label">Instagram</span>
+                  <span class="contact-item-value">@laparisiennebarloungee</span>
+                </div>
+              </a>
+              <a href="https://maps.google.com/?q=La+Parisienne+Los+Arenales+del+Sol" target="_blank" rel="noopener" class="contact-item" aria-label="Dirección">
+                <span class="contact-item-icon">📍</span>
+                <div>
+                  <span class="contact-item-label">Dirección</span>
+                  <span class="contact-item-value">Av. San Bartolomé de Tirajana, 32-34<br>03195 Los Arenales del Sol</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-map reveal-right" data-delay="100">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.2!2d-0.5286!3d38.1621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f6256afc01b12d2!2sLa+Parisienne+Coctel-Bar-Lounge!5e0!3m2!1ses!2ses!4v1"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de La Parisienne en Google Maps"
+            aria-label="Mapa de ubicación de La Parisienne">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-the">La</span>
+          <span class="logo-name">Parisienne</span>
+          <span class="logo-dot">◆</span>
+          <p class="footer-tagline">Cocktail Bar · Lounge · Los Arenales del Sol</p>
+        </div>
+        <nav class="footer-links" aria-label="Navegación pie de página">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#especialidades">Especialidades</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#contacto">Contacto</a>
+          <a href="https://www.instagram.com/laparisiennebarloungee" target="_blank" rel="noopener">Instagram</a>
+        </nav>
+        <p class="footer-copy">© 2026 La Parisienne · Av. San Bartolomé de Tirajana, 32-34 · Los Arenales del Sol</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
