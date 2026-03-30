@@ -17,8 +17,9 @@
   --gold-dim:    rgba(201,168,76,0.10);
   --gold-border: rgba(201,168,76,0.22);
   --rose:        #B8394A;
-  --font:        'Inter', sans-serif;
-  --font-serif:  'Playfair Display', Georgia, serif;
+  --font:         'Inter', sans-serif;
+  --font-serif:   'Playfair Display', Georgia, serif;
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
   --radius:      14px;
   --radius-sm:   8px;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -256,11 +257,11 @@ ul { list-style: none; }
 
 /* Hero title clip-mask animation */
 .hero-title {
-  font-family: var(--font-serif); font-size: clamp(3.2rem, 9vw, 7rem);
-  font-weight: 700; line-height: 1.06; letter-spacing: -0.02em;
+  font-family: var(--font-display); font-size: clamp(4rem, 10.5vw, 9rem);
+  font-weight: 400; line-height: 0.95; letter-spacing: 0.04em;
   margin-bottom: 0;
 }
-.title-mask { display: block; overflow: hidden; padding-bottom: 0.06em; }
+.title-mask { display: block; overflow: hidden; padding-bottom: 0.22em; margin-bottom: -0.14em; }
 .title-line {
   display: block; transform: translateY(110%); opacity: 0;
   animation: lineReveal 0.9s var(--ease-out-expo) forwards;
@@ -608,7 +609,7 @@ ul { list-style: none; }
   .stat-divider { width: 40px; height: 1px; }
   .about-cards { grid-template-columns: 1fr; }
   .specialties-grid { grid-template-columns: 1fr; }
-  .hero-title { font-size: clamp(2.8rem, 14vw, 4.5rem); }
+  .hero-title { font-size: clamp(3.5rem, 16vw, 6rem); }
 }
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: center; }
