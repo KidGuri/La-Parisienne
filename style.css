@@ -158,8 +158,19 @@ ul { list-style: none; }
 #nav.scrolled .nav-inner { padding: 18px 0; }
 
 .nav-logo {
-  display: flex; align-items: baseline; gap: 4px; flex-shrink: 0;
+  display: flex; align-items: center; flex-shrink: 0;
 }
+.nav-logo-img {
+  height: 52px; width: 52px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  transition: transform 0.3s var(--ease-out-quart), opacity 0.3s;
+  object-fit: cover;
+}
+.nav-logo:hover .nav-logo-img { transform: scale(1.06); opacity: 0.9; }
+#nav.scrolled .nav-logo-img { height: 44px; width: 44px; }
+
+/* Keep for footer */
 .logo-the {
   font-family: var(--font-serif); font-style: italic; font-size: 1rem;
   color: var(--muted); font-weight: 400;
